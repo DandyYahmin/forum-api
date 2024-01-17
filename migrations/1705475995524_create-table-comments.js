@@ -3,20 +3,20 @@
 exports.shorthands = undefined;
 
 exports.up = pgm => {
-    pgm.createTable('threads', {
+    pgm.createTable('comments', {
         id: {
             type: 'VARCHAR(50)',
             primaryKey: true
         },
-        title: {
-            type: 'TEXT',
-            notNull: false
-        },
-        body: {
+        content: {
             type: 'TEXT',
             notNull: false
         },
         user: {
+            type: 'VARCHAR(50)',
+            notNull: true
+        },
+        thread: {
             type: 'VARCHAR(50)',
             notNull: true
         }
@@ -24,5 +24,5 @@ exports.up = pgm => {
 };
 
 exports.down = pgm => {
-    pgm.dropTable('threads')
+    pgm.dropTable('comments')
 };
