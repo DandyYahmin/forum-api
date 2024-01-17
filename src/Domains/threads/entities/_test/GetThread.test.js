@@ -17,7 +17,7 @@ describe('a GetThread entities', () => {
 
     it('should create new getThread object correctly', () => {
         const payload = {
-            id: 'thread-sekian123'
+            id: 'thread-123'
         }
         const getThread = new GetThread(payload)
 
