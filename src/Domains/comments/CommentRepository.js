@@ -9,6 +9,9 @@ class CommentRepository {
     async getComment(thread) {
         throw new Error('COMMENT_REPOSITORY.METHOD_NOT_IMPLEMENTED')
     }
+    async deleteComment(comment) {
+        throw new Error('DELETE_REPOSITORY.METHOD_NOT_IMPLEMENTED')
+    }
 }
 
 module.exports = CommentRepository
